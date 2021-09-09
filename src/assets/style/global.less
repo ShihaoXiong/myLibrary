@@ -1,0 +1,11 @@
+.page__container {
+	width: 100%;
+}
+
+/* mixin */
+.flex(@d: row, @w: nowrap, @j: center, @a: center) {
+	display: flex;
+	flex-flow: @d @w;
+	justify-content: @j;
+	align-items: @a;
+}
