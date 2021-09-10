@@ -47,7 +47,7 @@ const setCollapsed = () => (collapsed.value = !collapsed.value);
 .logo {
 	margin-bottom: 20px;
 	img {
-		width: 50px;
+		width: 5rem;
 	}
 }
 .collapsed-bar {

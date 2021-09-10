@@ -21,7 +21,7 @@ const label = computed<string>(() => props.subject.substring(0, 1));
 <style lang="less">
 .card {
 	padding: 15px;
-	.size(200px, 200px);
+	.size(20rem, 20rem);
 	margin: 10px;
 	border-radius: 50px;
 	position: relative;

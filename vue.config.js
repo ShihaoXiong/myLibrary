@@ -28,12 +28,7 @@ module.exports = {
 				.use('style-resources-loader')
 				.loader('style-resources-loader')
 				.options({
-					patterns: [
-						'src/assets/style/global.less',
-						'src/assets/style/reset.less',
-						'src/assets/style/scroll.less',
-						'src/assets/style/desktop.less'
-					]
+					patterns: ['src/assets/style/global.less', 'src/assets/style/reset.less', 'src/assets/style/scroll.less']
 				})
 				.end();
 		});
