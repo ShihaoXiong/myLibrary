@@ -1,7 +1,10 @@
 <template>
 	<n-layout-sider collapse-mode="width" :collapsed="collapsed" :collapsed-width="90" content-style="padding: 25px 15px">
 		<div class="logo">
-			<img :src="require('@/assets/img/logo.png')" alt="" />
+			<img :src="require('@/assets/img/logo.png')" alt />
+		</div>
+		<div class="collapsed-bar" @click="setCollapsed">
+			<hamburger-button theme="outline" size="24" fill="#333" />
 		</div>
 		<n-menu
 			:collapsed="collapsed"
@@ -21,18 +24,12 @@ import { RouterLink } from 'vue-router';
 
 const menuOptions: MenuOption[] = [
 	{
-		icon: () => h(HamburgerButton, { onclick: setCollapsed, size: 25 }),
-		key: 'icon'
-	},
-	{
-		title: '首页',
-		label: () => h(RouterLink, { to: '/home' }),
+		label: () => h(RouterLink, { to: '/', text: '首页' }),
 		key: 'home',
 		icon: () => h(HomeTwo)
 	},
 	{
-		title: '库',
-		label: () => h(RouterLink, { to: '/library' }),
+		label: () => h(RouterLink, { to: '/library', text: '库' }),
 		key: 'library',
 		icon: () => h(Ring)
 	}
@@ -48,6 +45,16 @@ const setCollapsed = () => (collapsed.value = !collapsed.value);
 	min-height: 100vh;
 }
 .logo {
+	margin-bottom: 20px;
+	img {
+		width: 50px;
+	}
+}
+.collapsed-bar {
+	cursor: pointer;
+}
+.logo,
+.collapsed-bar {
 	text-align: center;
 }
 </style>
