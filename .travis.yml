@@ -20,3 +20,11 @@ after_success:
 branches:
   only:
     - master
+
+env:
+  global:
+    - GH_REF: github.com/shihaoxiong/myLibrary.git
+    - GH_TOKEN: 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
+    - P_BRANCH: gh-pages
+    - U_EMILE: shihao.xiong@icloud.com
+    - U_NAME: ShihaoXiong
