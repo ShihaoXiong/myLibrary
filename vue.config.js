@@ -5,6 +5,7 @@ module.exports = {
 	//打包带上相对路径  想要让这个起作用,下面2个必填
 	publicPath: './',
 	assetsDir: 'assets',
+	publicPath: process.env.NODE_ENV === 'production' ? '/myLibrary' : '/',
 
 	//生产环境不生成sourceMap
 	productionSourceMap: false,
