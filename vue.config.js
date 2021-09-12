@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
 	//打包带上相对路径  想要让这个起作用,下面2个必填
 	// publicPath: './',
-	publicPath: process.env.NODE_ENV === 'production' ? '/myLibrary' : '/',
+	publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
 	assetsDir: 'assets',
 
 	//生产环境不生成sourceMap
