@@ -4,18 +4,17 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
 		name: 'Home',
-		component: () => import('@/views/Home.vue'),
-		meta: {
-			label: '首页'
-		}
+		component: () => import('@/views/Home.vue')
 	},
 	{
 		path: '/library',
 		name: 'Library',
-		component: () => import('@/views/Library.vue'),
-		meta: {
-			label: '库'
-		}
+		component: () => import('@/views/Library.vue')
+	},
+	{
+		path: '/subject',
+		name: 'Subject',
+		component: () => import('@/views/Subject.vue')
 	}
 ];
 

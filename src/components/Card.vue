@@ -1,5 +1,5 @@
 <template>
-	<div class="card" :class="isFocus ? 'is-focus' : 'not-focus'" :style="{ background: color }">
+	<div class="card" :class="isFocus ? 'is-focus' : 'not-focus'" :style="{ background: color }" @click="jumpTo">
 		<div class="label__container">
 			{{ label }}
 		</div>
@@ -8,14 +8,21 @@
 
 <script lang="ts" setup>
 import { computed, defineProps } from 'vue';
+import { useRouter } from 'vue-router';
 
 const props = defineProps({
+	id: { type: String, requires: true },
 	subject: { type: String, required: true },
 	color: { type: String, required: true },
 	isFocus: { type: Boolean, default: false }
 });
 
+const router = useRouter();
+
 const label = computed<string>(() => props.subject.substring(0, 1));
+const jumpTo = () => {
+	router.push({ path: '/subject', query: { subject: props.id } });
+};
 </script>
 
 <style lang="less">

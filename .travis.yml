@@ -24,7 +24,7 @@ branches:
 env:
   global:
     - GH_REF: github.com/shihaoxiong/myLibrary.git
-    - GH_TOKEN: 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
+    - GH_TOKEN: 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
     - P_BRANCH: gh-pages
     - U_EMILE: shihao.xiong@icloud.com
     - U_NAME: ShihaoXiong
