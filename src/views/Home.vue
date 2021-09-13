@@ -30,18 +30,37 @@ onMounted(() => {
 
 <style lang="less">
 .page__home {
-	.card__container {
-		.size(30%, 100vh);
-		.flex(@d: column, @j: space-between);
-		.border-box;
-		padding: 20vh 5vw;
+	@media (min-width: 1000px) {
+		.card__container {
+			.size(30%, 100vh);
+			.flex(@d: column, @j: space-between);
+			.border-box;
+			padding: 20vh 5vw;
+		}
+		.home__animate {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 70%;
+		}
 	}
-	.home__animate {
-		position: absolute;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: 70%;
+	@media (max-width: 999px) {
+		.card__container {
+			// position: absolute;
+			.size;
+			.border-box;
+			padding: 5vh 10%;
+			& > div {
+				margin-bottom: 10rem;
+			}
+		}
+		.home__animate {
+			// position: absolute;
+			// left: 0;
+			// bottom: 0;
+			width: 100%;
+		}
 	}
 }
 </style>

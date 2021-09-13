@@ -56,4 +56,8 @@ const getRandomTopic = (arr: Topics[], count: number): Topics[] => {
 };
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.page__subject {
+	padding: 20px;
+}
+</style>

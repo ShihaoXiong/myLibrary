@@ -28,16 +28,17 @@ const jumpTo = () => {
 
 <style lang="less">
 .card {
-	padding: 1.5rem;
-	margin: 10px;
+	padding: 2rem;
 	border-radius: 20px;
 	position: relative;
 	overflow: hidden;
+	box-shadow: 0 0.4rem 2rem 0 v-bind(color);
+	z-index: 1;
 	.size(100%, auto);
+	.border-box;
 	.label__container {
 		border-radius: 50%;
 		background-color: #fff;
-		.size(8rem, 8rem);
 		.flex();
 		color: v-bind(color);
 		font-weight: bold;
@@ -51,6 +52,25 @@ const jumpTo = () => {
 		right: 0;
 		font-weight: bold;
 		font-family: fangsong;
+	}
+
+	@media (min-width: 1000px) {
+		.label__container {
+			.size(8rem, 8rem);
+			font-size: 4rem;
+		}
+		.card__decration {
+			font-size: 10rem;
+		}
+	}
+	@media (max-width: 999px) {
+		.label__container {
+			font-size: 15rem;
+			.size(30rem, 30rem);
+		}
+		.card__decration {
+			font-size: 28rem;
+		}
 	}
 }
 </style>
