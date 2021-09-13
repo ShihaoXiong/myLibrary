@@ -3,6 +3,7 @@
 		<div class="label__container">
 			{{ label }}
 		</div>
+		<span class="card__decration">{{ label }}</span>
 	</div>
 </template>
 
@@ -27,36 +28,29 @@ const jumpTo = () => {
 
 <style lang="less">
 .card {
-	padding: 15px;
-	.size(20rem, 20rem);
+	padding: 1.5rem;
 	margin: 10px;
-	border-radius: 50px;
+	border-radius: 20px;
 	position: relative;
 	overflow: hidden;
-	&.not-focus::after,
-	&.not-focus::before {
-		content: '';
-		position: absolute;
-		.size(75%, 75%);
-		background-color: rgba(255, 255, 255, 0.2);
-		border-radius: 50%;
-	}
-	&.not-focus::before {
-		right: -5%;
-		top: -40%;
-	}
-	&.not-focus::after {
-		right: -40%;
-		top: 5%;
-	}
+	.size(100%, auto);
 	.label__container {
 		border-radius: 50%;
 		background-color: #fff;
-		.size(35%, 35%);
+		.size(8rem, 8rem);
 		.flex();
 		color: v-bind(color);
 		font-weight: bold;
 		font-size: 4rem;
+	}
+	.card__decration {
+		font-size: 10rem;
+		color: rgba(0, 0, 0, 0.3);
+		position: absolute;
+		top: -2.5rem;
+		right: 0;
+		font-weight: bold;
+		font-family: fangsong;
 	}
 }
 </style>

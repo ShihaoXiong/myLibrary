@@ -1,7 +1,6 @@
 <template>
 	<n-config-provider :theme="theme">
-		<n-layout has-sider>
-			<Menu />
+		<n-layout>
 			<router-view />
 		</n-layout>
 	</n-config-provider>
@@ -9,7 +8,6 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import Menu from '@/components/Menu.vue';
 import { darkTheme, NConfigProvider, useOsTheme, NLayout } from 'naive-ui';
 import { BuiltInGlobalTheme } from 'naive-ui/lib/themes/interface';
 

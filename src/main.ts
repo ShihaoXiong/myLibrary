@@ -1,7 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import '@/configs/rem';
 
 createApp(App)
 	.use(router)
