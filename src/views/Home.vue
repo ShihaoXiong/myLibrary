@@ -47,7 +47,6 @@ onMounted(() => {
 	}
 	@media (max-width: 999px) {
 		.card__container {
-			// position: absolute;
 			.size;
 			.border-box;
 			padding: 5vh 10%;
@@ -56,9 +55,6 @@ onMounted(() => {
 			}
 		}
 		.home__animate {
-			// position: absolute;
-			// left: 0;
-			// bottom: 0;
 			width: 100%;
 		}
 	}

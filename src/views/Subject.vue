@@ -6,13 +6,13 @@
 			</template>
 		</n-button>
 		<div>
-			<h2>简答题</h2>
+			<h2>名词解释</h2>
 			<ul :key="render">
 				<li v-for="item in getRandomTopic(nonuExplain, 10)" :key="item.id">{{ item.topic }}</li>
 			</ul>
 		</div>
 		<div>
-			<h2>论述题</h2>
+			<h2>简答 & 论述</h2>
 			<ul :key="render">
 				<li v-for="item in getRandomTopic(discuss, 10)" :key="item.id">{{ item.topic }}</li>
 			</ul>
@@ -49,7 +49,7 @@ const getRandomTopic = (arr: Topics[], count: number): Topics[] => {
 	while (count-- > 0) {
 		const index = ~~(Math.random() * length);
 		res.push(arr[index]);
-		arr.slice(index, 1);
+		arr.splice(index, 1);
 	}
 
 	return res;
