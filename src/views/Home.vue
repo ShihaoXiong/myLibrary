@@ -1,7 +1,7 @@
 <template>
 	<div class="page__container page__home">
 		<div class="card__container">
-			<Card v-for="item in subjects" :key="item.key" :id="item.key" :subject="item.name" :color="item.color"></Card>
+			<Card v-for="item in subjects" :key="item.key" :id="item.key" :subject="item.name" :color="item.color" />
 		</div>
 		<div class="home__animate" ref="animationContainer"></div>
 	</div>
@@ -21,7 +21,7 @@ onMounted(() => {
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
-		animationData: animationData
+		animationData
 	};
 
 	lottie.loadAnimation(params);

@@ -10,17 +10,23 @@
 			<ul :key="render">
 				<li v-for="item in getRandomTopic(nonuExplain, 10)" :key="item.id">{{ item.topic }}</li>
 			</ul>
+			<!-- <Title text="名词解释" /> -->
+			<!-- <List :key="render" :data="getRandomTopic(nonuExplain, 10)" /> -->
 		</div>
 		<div>
 			<h2>简答 & 论述</h2>
 			<ul :key="render">
 				<li v-for="item in getRandomTopic(discuss, 10)" :key="item.id">{{ item.topic }}</li>
 			</ul>
+			<!-- <Title text="简答 & 论述" /> -->
+			<!-- <List :key="render" :data="getRandomTopic(discuss, 10)" /> -->
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
+import Title from '@/components/Title.vue';
+import List from '@/components/List.vue';
 import { Topics, TopicsList } from '@/interface';
 import { useRoute } from 'vue-router';
 import { NButton } from 'naive-ui';
@@ -49,7 +55,7 @@ const getRandomTopic = (arr: Topics[], count: number): Topics[] => {
 	while (count-- > 0) {
 		const index = ~~(Math.random() * length);
 		res.push(arr[index]);
-		arr.splice(index, 1);
+		// arr.splice(index, 1);
 	}
 
 	return res;
